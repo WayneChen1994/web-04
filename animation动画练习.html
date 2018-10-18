@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="UTF-8">
+        <title>animation动画练习</title>
+        <style type="text/css">
+                .box1{
+                        width: 500px;
+                        height: 500px;
+                        overflow: hidden;
+                        border: 2px solid blue;
+                        border-radius: 50%;
+                        animation: suofang 2s infinite alternate;
+                }
+                .box2{
+                        width: 300px;
+                        height: 300px;
+                        margin: 100px auto;
+                        overflow: hidden;
+                        border: 2px solid red;
+                        border-radius: 50%;
+                        animation: suofang 2s infinite alternate;
+                }
+                .box3{
+                        width: 100px;
+                        height: 100px;
+                        margin: 100px auto;
+                        border: 2px solid yellow;
+                        border-radius: 50%;
+                        animation: suofang 2s infinite alternate;
+                }
+                @keyframes suofang {
+                        0%{}
+                        100%{
+                                transform: scale(0.5);
+                        }
+                }
+        </style>
+</head>
+<body>
+        <div class="box1">
+                <div class="box2">
+                        <div class="box3">
+                        
+                        </div>
+                </div>
+        </div>
+</body>
+</html>

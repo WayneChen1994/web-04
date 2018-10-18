@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="UTF-8">
+        <title>动画练习</title>
+        <style>
+                *{
+                        margin: 0;
+                        padding: 0;
+                }
+                body{
+                        background: #333333;
+                }
+                .box{
+                        width: 900px;
+                        height: 350px;
+                        /*background: #0000FF;*/
+                        margin: 50px auto;
+                }
+                .box .box1{
+                        width: 260px;
+                        height: 350px;
+                        /*background: red;*/
+                        float: left;
+                        margin: 0 20px;
+                        text-align: center;
+                }
+                .box1 img{
+                        width: 174px;
+                        height: 155px;
+                        border: 1px solid white;
+                        transition: all 0.5s;
+                }
+                .box1 img:hover{
+                        transform: rotate(360deg) scale(1.3);
+                }
+                .box1 .button{
+                        display: block;
+                        height: 40px;
+                        border: 2px solid white;
+                        margin: 30px 20px;
+                        line-height: 40px;
+                        text-align: left;
+                        padding-left: 20px;
+                        text-decoration: none;
+                        font-size: 14px;
+                        font-weight: bold;
+                        color: green;
+                        background: url("img/allow.png") no-repeat 150px center;
+                        transition: all 0.5s;
+                        position: relative;
+                }
+                .box1 .button:hover{
+                        background-position: 175px center;
+                }
+                .line{
+                        display: block;
+                        background: white;
+                        position: absolute;
+                        transition: all 0.5s;
+                }
+                .line-top{
+                        width: 0%;
+                        height: 2px;
+                        left: 0;
+                        top: -2px;
+                        transform: translateX(-300px);
+                }
+                .line-bottom{
+                        width: 0%;
+                        height: 2px;
+                        bottom: -2px;
+                        right: 0;
+                        transform: translateX(300px);
+                }
+                .box1 .button:hover .line-top,.box1 .button:hover .line-bottom{
+                        width: 100%;
+                        transform: translateX(0);
+                }
+                .line-left{
+                        width: 2px;
+                        height: 0%;
+                        left: -2px;
+                        bottom: 0;
+                        transform: translateY(-300px);
+                }
+                .line-right{
+                        width: 2px;
+                        height: 40px;
+                        right: -2px;
+                        top: 0;
+                        transform: translateY(+300px);
+                }
+                .box1 .button:hover .line-left,.box1 .button:hover .line-right{
+                        height: 100%;
+                        transform: translateY(0);
+                }
+        </style>
+</head>
+<body>
+        <div class="box">
+                <div class="box1">
+                        <img src="img/mission.png" />
+                        <a href="#" class="button">MISSION
+                                <span class="line line-top"></span>
+                                <span class="line line-bottom"></span>
+                                <span class="line line-left"></span>
+                                <span class="line line-right"></span>
+                        </a>
+                </div>
+                <div class="box1">
+                        <img src="img/play.png" />
+                        <a href="#" class="button">PLAY
+                                <span class="line line-top"></span>
+                                <span class="line line-bottom"></span>
+                                <span class="line line-left"></span>
+                                <span class="line line-right"></span>
+                        </a>
+                </div>
+                <div class="box1">
+                        <img src="img/touch.png" />
+                        <a href="#" class="button">TOUCH
+                                <span class="line line-top"></span>
+                                <span class="line line-bottom"></span>
+                                <span class="line line-left"></span>
+                                <span class="line line-right"></span>
+                        </a>
+                </div>
+        </div>
+</body>
+</html>

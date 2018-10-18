@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="UTF-8">
+        <title>动画</title>
+        <style type="text/css">
+                .box{
+                        width: 400px;
+                        height: 400px;
+                        background: red;
+                        transition: all 1s;
+                }
+                .box2{
+                        width: 100px;
+                        height: 100px;
+                        background: blue;
+                        /* 过渡动画 */
+                        transition: all 3s;
+                }
+                .box:hover .box2{
+                        /* scale缩放动画     取值[0,1]缩小      大于1放大*/
+                        /*transform: scale(0.3);*/
+                        /* 平移动画 ：translateX() 在X方向的平移，取值为正，向右平移，取值为负，向左平移，必须带单位。
+                        translateY() 在Y方向的平移，取值为正，向下平移，取值为负，向上平移
+                        translate(x,y) */
+                        /*transform: translateY(200px);*/
+                        /* 旋转动画：rotate() 单位deg 取值大于0顺时针方向旋转
+                        取值小于0逆时针方向旋转*/
+                        transform: rotate(-1080deg) translate(200px,200px) scale(1.3);
+                }
+        </style>
+</head>
+<body>
+        <div class="box">
+                <div class="box2"></div>
+        </div>
+</body>
+</html>
