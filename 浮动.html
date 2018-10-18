@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="UTF-8">
+        <title>浮动</title>
+        <style>
+                .box{
+                        width: 200px;
+                        height: 200px;
+                        background: yellow;
+                        float: left;
+                }
+                .box1{
+                        width: 200px;
+                        height: 200px;
+                        background: red;
+                        float: left;
+                }
+                .box2{
+                        width: 300px;
+                        height: 300px;
+                        background: blue;
+                }
+                .box3{
+                        background: pink;
+                        overflow: hidden;
+                }
+                /*.box4{*/
+                        /*!* 清除浮动 *!*/
+                        /*clear: both;*/
+                /*}*/
+        </style>
+</head>
+<body>
+        
+        块元素默认排列方式是从上到下依次排列，我们称这种排列方式为标准流（文档流）。当我们给块元素添加浮动之后，则此元素不再按照之前的排布方式，而是脱离了标准流，重新排布，不再占据原本的位置。
+        
+        高度塌陷发生的契机：
+        当没有给父元素指定高度的时候，并且又给所有的子元素添加浮动，此时就会发生高度塌陷。
+        
+        如何解决：
+        1、清除浮动，使用clear:both
+        2、给父元素添加overflow: hidden
+        
+        <div class="box3">
+                <div class="box"></div>
+                <div class="box1"></div>
+                <!--<div class="box4"></div>-->
+        </div>
+        <div class="box2"></div>
+</body>
+</html>

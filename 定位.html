@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="UTF-8">
+        <title>定位</title>
+        <style type="text/css">
+                .box{
+                        width: 300px;
+                        height: 300px;
+                        background: red;
+                        /* 补丁 */
+                        /*overflow: hidden;*/
+                        position: relative;
+                }
+                .box1{
+                        width: 100px;
+                        height: 100px;
+                        background: yellow;
+                        position: absolute;
+                        left: 100px;
+                        bottom: 100px;
+                }
+                .box2{
+                        width: 100px;
+                        height: 100px;
+                        background: blue;
+                        position: fixed;
+                        right: 100px;
+                        bottom: 100px;
+                }
+        </style>
+</head>
+<body>
+        
+        定位分为三种：
+        1、相对定位
+        position: relative
+        相对定位是相对于自己原本的位置进行定位，它仍然占据自己原本的位置，【没有脱离文档/标准流】
+        一般情况下，我们使用这种定位方式，让元素变为包含块。
+        
+        2、绝对定位
+        position: absolute
+        绝对定位是相对于带有定位属性【position】的父元素进行定位，若找不到，则向上一级寻找，直至找到body。它不占据自己原本的位置【脱离文档、标准流的】。
+        一般情况下，相对定位与绝对定位都是一起连用的。一般情况下，我们会给父元素设置相对定位，给子元素设置绝对定位，我们就可以做到，子元素在父元素中进行定位。
+        
+        3、固定定位
+        position: fixed
+        固定定位是相对于窗口进行定位的，与父元素无关。不占据自己原本的位置【牛皮癣小广告】
+        
+        <div class="box">
+                <div class="box1">
+                
+                </div>
+                <div class="box2">
+                
+                </div>
+        </div>
+</body>
+</html>

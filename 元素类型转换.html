@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="UTF-8">
+        <title>元素类型转换</title>
+        <style type="text/css">
+                p{
+                        background: red;
+                        overflow: hidden;
+                }
+                p a{
+                        /* 转为块元素 */
+                        display: block;
+                        /* 隐藏，不占位置的隐藏 */
+                        /*display: none;*/
+                        /* 转为行内块元素 */
+                        /* 透明度，取值[0,1]  0：全透明 1：不透明 */
+                        opacity: 0.6;
+                        /*display: inline-block;*/
+                        float: left;
+                        color: white;
+                        font-size: 12px;
+                        text-align: center;
+                        text-decoration: none;
+                        line-height: 40px;
+                        width: 120px;
+                        height: 40px;
+                        background: blue;
+                        margin-right: 1px;
+                }
+        </style>
+</head>
+<body>
+        因为我们的元素分为两种类型，一种是行内元素，一种是块元素
+        行内元素是无法设置大小的，因此我们在使用行内元素的时候，有时候需要给它设置大小，此时我们就可以进行元素类型转换。
+        <p><a href="#">首页</a><a href="#">新闻</a><a href="#">娱乐</a></p>
+</body>
+</html>
